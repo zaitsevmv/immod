@@ -5805,7 +5805,7 @@ mean_gold_rails_wait = gold_rails_queue_stat.mean();]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[p_railroad = 1 - ((queue3.in.count()+queue1.in.count())/2)/time(SECOND)*build_int;]]></Code>
+								<Code><![CDATA[p_railroad = 1 - (min(queue3.in.count(),queue1.in.count()))/time(SECOND)*build_int;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
